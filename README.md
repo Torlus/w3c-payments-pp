@@ -3,6 +3,7 @@ Lyra-Network Position Paper for **W3C Workshop on Web Payments**.
 Authors:
 
 Grégory Estrade - gregory.estrade@lyra-network.com
+
 Laurent Penou - laurent.penou@lyra-network.com
 
 
@@ -69,9 +70,8 @@ The advantages of this scheme, besides the fact that it feels more natural, is t
 
 #### Dealing with legacy
 
-We believe that these suggested changes, although they seem important, could be handled more easily with the help of new standards and their implementation at the browser level.
-
-**TODO**
+We believe that these suggested changes, although they seem important, could be handled more easily with the help of new standards and their implementation at the browser level, 
+while keeping all the 3-D Secure infrastructure and authentication scheme. However, this is beyond the scope of this abstract.
 
 ### Asymmetry concerns
 
@@ -83,7 +83,7 @@ Digital currencies don't suffer from these issues, and it can be stated that per
 
 Lately, initiatives have come to light, as some markets are emerging, and the focus of established financial institutions on small businesses and individuals makes us envision a unprecedented growth in payments.
 
-For E-commerce payments, for sure, but also in retail, as the mobile point-of-sale (mPOS) solutions allow the same category of merchants to accept cards.
+E-commerce payments will benefit from this growth, for sure, but the higher increase rate should happen for retail, as the mobile point-of-sale (mPOS) solutions allow the same category of merchants to accept cards.
 
 To sum up, what can be foreseen about Web payments is that in years to come, anyone may be concerned by them not only as a customer, but as a seller as well.
 
@@ -127,16 +127,35 @@ Bank A relays the authorization result to Bank B, which itself relays the result
 
 ### Security and Identity Management
 
-#### Key management concerns
+In a previous paragraph, we stated that some public keys may be signed by a Certificate Authority managed by a financial institution, be it an acquirer or an issuer.
 
-#### WebCryptoAPI
+These public keys might be used for *identification* purposes, from the financial institution side. However, from the cardholder/acceptor side, these are used for *anonymization* purposes.
 
-#### Web of trust
+Even in distributed payment schemes as provided by digital currencies, these public keys should be used solely for *anonymization* purposes.
 
-#### Distributed private key management
+However, at some point, there is a need for strong identification, in order to address the following subjects:
+* Distributed identity management.
+* Secure transportation of the aforementioned private keys across devices.
+* Revocation of these keys.
 
-# References
+We feel that this specific part of the whole architecture is probably the most important and difficult one.
 
-http://individual.utoronto.ca/aldar/paper/2012/dpkg.pdf
+However, some standards are already there, to help build up its foundations, namely the WebID protocol and FOAF specification.
 
-http://www.w3.org/TR/WebCryptoAPI/
+We also believe that the specifications issued by the JOSE working group, especially those related to key protection, should be taken into account.
+
+## References
+
+Distributed private key management: http://individual.utoronto.ca/aldar/paper/2012/dpkg.pdf
+
+WebCryptoAPI: http://www.w3.org/TR/WebCryptoAPI/
+
+Web of trust: http://en.wikipedia.org/wiki/Web\_of\_trust
+
+Protecting JSON Web Key (JWK) Objects: http://tools.ietf.org/html/draft-miller-jose-jwe-protected-jwk-02
+
+WebID provider using Node.js: http://magnetik.github.io/node-webid-report/
+
+FOAF Vocabulary Specification 0.99: http://xmlns.com/foaf/spec/
+
+WebID 1.0: http://www.w3.org/2005/Incubator/webid/spec/
