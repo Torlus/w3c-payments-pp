@@ -65,6 +65,12 @@ Another way to envision this payment could be:
 
 The advantages of this scheme, besides the fact that it feels more natural, is that the trust environments are already there, as the cardholder only has to trust the issuer, and the same applies to the acceptor and the acquirer.
 
+#### Dealing with legacy
+
+We believe that these suggested changes, although they seem important, could be handled more easily with the help of new standards and their implementation at the browser level.
+
+**TODO**
+
 ### Asymmetry concerns
 
 Running an e-commerce business still requires in most cases the subscription of an acceptor contract and a dedicated account for card processing (with the notable exception of PayPal).
@@ -92,19 +98,16 @@ Depending on the use cases of the public key, it may be signed by a Certificate 
 ### Use case
 
 #### Initialization
-Alice owns an account at Bank A, which provided her also a credit card.
 
-Alice provided a public key to Bank A, and after some identity verification, Bank A signed this public key.
+From the customer (cardholder) side:
+* Alice owns an account at Bank A, which provided her also a credit card.
+* Alice provided a public key to Bank A, and after some identity verification, Bank A signed this public key.
+* Alice also owns some coupons from Company C, and owns a public key signed by the same entity.
 
-Alice also owns some coupons from Company C, and owns a public key signed by the same entity.
-
-
-
-Bob runs an e-commerce store. Bank B provided him an account, as well as an acceptor contract.
-
-Bob provided a public key to his bank, and after some identity verification, Bank B signed this public key.
-
-Bob's store accepts coupons from Company C, therefore one of Bob's public key has been signed by the same entity.
+From the merchant (acceptor) side:
+* Bob runs an e-commerce store. Bank B provided him an account, as well as an acceptor contract.
+* Bob provided a public key to his bank, and after some identity verification, Bank B signed this public key.
+* Bob's store accepts coupons from Company C, therefore one of Bob's public key has been signed by the same entity.
 
 #### Payment process
 
@@ -120,5 +123,18 @@ Bank A performs the authorization based on information provided by Bob's store (
 
 Bank A relays the authorization result to Bank B, which itself relays the result to Bob's server.
 
-### Distributed private key management
+### Security and Identity Management
 
+#### Key management concerns
+
+#### WebCryptoAPI
+
+#### Web of trust
+
+#### Distributed private key management
+
+# References
+
+http://individual.utoronto.ca/aldar/paper/2012/dpkg.pdf
+
+http://www.w3.org/TR/WebCryptoAPI/
