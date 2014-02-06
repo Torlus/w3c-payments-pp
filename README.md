@@ -20,7 +20,8 @@ Tim Berners-Lee, “Weaving the Web”
 
 Edward Snowden
 
-## Introduction
+# Introduction
+
 
 Allow us to be a bit provocative: all card-based payment schemes are broken. They basically fail at understanding the need of both identity and anonymity, which are the critical topics that should be addressed at the Web level. Recent issues highlighted in the news about privacy, stories about sensitive data theft and global surveillance, should alert us, as citizens of the world, to how we want the future of information processing to be.
 
@@ -30,7 +31,8 @@ Our main concern is to find ways to enforce good practices, by participating in 
 
 As we are also pragmatic, and aware that such changes will take years, we will address existing payment schemes, and hopefully pave the way for safer traditional schemes.
 
-## Digital wallets and distributed models generalization
+# Digital wallets and distributed models generalization
+
 
 In this chapter, we will conduct a tour of the most common payment scenarios. 
 
@@ -38,14 +40,19 @@ Then we will make some proposals to provide a more uniform payment processing sc
 
 Based on this work, we will envision some work-arounds for exisitng payment methods, and discuss how Web standards could accelerate the migration.
 
-### Card processing
+## Card processing
 
-#### State of the art
+
+### State of the art
+
 
 Let's review the steps of a Visa/MasterCard e-commerce payment:
-* The cardholder provides his card details to the acceptor.
-* These details, along with transaction information (amount, currency) are relayed to the issuer through the acceptor for 3-D Secure authentication. 
-* As a whole, the same information is relayed through the acceptor and the acquirer to the issuer for authorization.
+
+- The cardholder provides his card details to the acceptor.
+
+- These details, along with transaction information (amount, currency) are relayed to the issuer through the acceptor for 3-D Secure authentication. 
+
+- As a whole, the same information is relayed through the acceptor and the acquirer to the issuer for authorization.
 
 The first step assumes that the cardholder is ready to trust the acceptor at some level.
 
@@ -59,21 +66,27 @@ The first step is basically *flawed at Web scale*.
 
 Althought it has its justifications for retail transactions processing, on which the e-commerce model is based, this step feels unnecessary and rises many security concerns.
 
-#### Proposed alternative
+### Proposed alternative
+
 
 Another way to envision this payment could be:
-* The acceptor provides some identification information, as well as transaction details to the cardholder.
-* The cardholder authenticates himself to the issuer and provides transaction details.
-* Authorization is performed at issuer level, and its result is handed back to the acceptor through the acquirer.
+
+- The acceptor provides some identification information, as well as transaction details to the cardholder.
+
+- The cardholder authenticates himself to the issuer and provides transaction details.
+
+- Authorization is performed at issuer level, and its result is handed back to the acceptor through the acquirer.
 
 The advantages of this scheme, besides the fact that it feels more natural, is that the trust environments are already there, as the cardholder only has to trust the issuer, and the same applies to the acceptor and the acquirer.
 
-#### Dealing with legacy
+### Dealing with legacy
+
 
 We believe that these suggested changes, although they seem important, could be handled more easily with the help of new standards and their implementation at the browser level, 
 while keeping all the 3-D Secure infrastructure and authentication scheme. However, this is beyond the scope of this abstract.
 
-### Asymmetry concerns
+## Asymmetry concerns
+
 
 Running an e-commerce business still requires in most cases the subscription of an acceptor contract and a dedicated account for card processing (with the notable exception of PayPal).
 
@@ -87,7 +100,8 @@ E-commerce payments will benefit from this growth, for sure, but the higher incr
 
 To sum up, what can be foreseen about Web payments is that in years to come, anyone may be concerned by them not only as a customer, but as a seller as well.
 
-## Beyond the wallet scheme
+# Beyond the wallet scheme
+
 
 Users of digital currencies are familiar with the idea of digital wallets. These wallets can be used for both selling and purchasing goods and services, and are based on public key cryptography.
 
@@ -97,21 +111,30 @@ Such a wallet could be shared among different devices: desktops, laptops, smartp
 
 Depending on the use cases of the public key, it may be signed by a Certificate Authority, or using a "Web of trust" scheme instead.
 
-### Use case
+## Use case
 
-#### Initialization
+
+### Initialization
+
 
 From the customer (cardholder) side:
-* Alice owns an account at Bank A, which also provided her with a credit card.
-* Alice provided a public key to Bank A, and after some identity verification, Bank A signed this public key.
-* Alice also owns some coupons from Company C, and owns a public key signed by the same entity.
+
+- Alice owns an account at Bank A, which also provided her with a credit card.
+
+- Alice provided a public key to Bank A, and after some identity verification, Bank A signed this public key.
+
+- Alice also owns some coupons from Company C, and owns a public key signed by the same entity.
 
 From the merchant (acceptor) side:
-* Bob runs an e-commerce store. Bank B provided him with an account, as well as an acceptor contract.
-* Bob provided a public key to his bank, and after some identity verification, Bank B signed this public key.
-* Bob's store accepts coupons from Company C, therefore one of Bob's public key has been signed by the same entity.
 
-#### Payment process
+- Bob runs an e-commerce store. Bank B provided him with an account, as well as an acceptor contract.
+
+- Bob provided a public key to his bank, and after some identity verification, Bank B signed this public key.
+
+- Bob's store accepts coupons from Company C, therefore one of Bob's public key has been signed by the same entity.
+
+### Payment process
+
 
 Alice shops at Bob's store. On checkout, Bob's server provides a set of public keys related to his acceptance capabilities, as well as list of accepted payment methods, an amount, a currency, and a transaction identifier.
 
@@ -125,7 +148,8 @@ Bank A performs the authorization based on information provided by Bob's store (
 
 Bank A relays the authorization result to Bank B, which itself relays the result to Bob's server.
 
-### Security and Identity Management
+## Security and Identity Management
+
 
 In a previous paragraph, we stated that some public keys may be signed by a Certificate Authority managed by a financial institution, be it an acquirer or an issuer.
 
@@ -134,9 +158,12 @@ These public keys might be used for *identification* purposes, from the financia
 Even in distributed payment schemes as provided by digital currencies, these public keys should be used solely for *anonymization* purposes.
 
 However, at some point, there is a need for strong identification, in order to address the following subjects:
-* Distributed identity management.
-* Secure transportation of the aforementioned private keys across devices.
-* Revocation of these keys.
+
+- Distributed identity management.
+
+- Secure transportation of the aforementioned private keys across devices.
+
+- Revocation of these keys.
 
 We feel that this specific part of the whole architecture is probably the most important and difficult one.
 
@@ -144,7 +171,7 @@ However, some standards are already there, to help build up its foundations, nam
 
 We also believe that the specifications issued by the JOSE working group, especially those related to key protection, should be taken into account.
 
-## References
+# References
 
 Distributed private key management: http://individual.utoronto.ca/aldar/paper/2012/dpkg.pdf
 
