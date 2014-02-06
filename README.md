@@ -1,11 +1,37 @@
+Lyra-Network Position Paper for **W3C Workshop on Web Payments**.
+
+Authors:
+
+Grégory Estrade - gregory.estrade@lyra-network.com
+Laurent Penou - laurent.penou@lyra-network.com
+
+
+The web is more a social creation than a technical one. I designed
+it for a social effect — to help people work together — and not as
+a technical toy. The ultimate goal of the Web is to support and
+improve our weblike existence in the world. We clump into families,
+associations, and companies. We develop trust across the miles and
+distrust around the corner.
+Tim Berners-Lee, “Weaving the Web”
+
+I can't in good conscience allow the U.S. government to destroy privacy, internet freedom and basic liberties for people around the world with this massive surveillance machine they're secretly building.
+Edward Snowden
+
 ## Introduction
 
+Allow us to be a bit provocative: all card-based payment schemes are broken. They basically fail at understanding the need of both identity and anonymity, which are the critical topics that should be addressed at the Web level. Recent issues highlighted in the news about privacy, stories about sensitive data theft and global surveillance, should alert us, as citizens of the world, on how we want the future of information processing to be.
+
+We need to get rid of insufficient data protection schemes, avoid whenever possible the use of trust models relying on a single central authority. The problem is global, and is way beyond the scope of this document, but we still can do something about it for the subject addressed in this workshop.
+
+Our main concern is to find some ways to enforce good practices, by participating to the definition of a set of standards that would allow seamless introduction of distributed, networked trust models, as we can find nowadays in cryptocurrencies schemes like Bitcoin or Dogecoin.
+
+As we are also pragmatic, and aware that such changes will take years, we will address existing payment schemes, and hopefully pave the way for safer traditional schemes.
 
 ## Digital wallets and distributed models generalization
 
 In this chapter, we will make a tour of the most common payment scenarios. 
 
-Then we will make some proposals to provide a more uniform payment processing scheme, so that the user experience feels more comfortable.
+Then we will make some proposals to provide a more uniform payment processing scheme, so that the user experience feels more comfortable, and more trustworthy as well, by limiting disclosure of required information to zones where it becomes necessary.
 
 Based on this work, we will envision some work-arounds for exisitng payment methods, and discuss on how Web standards could accelerate the migration.
 
