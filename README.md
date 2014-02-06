@@ -6,34 +6,36 @@ Grégory Estrade - gregory.estrade@lyra-network.com
 Laurent Penou - laurent.penou@lyra-network.com
 
 
-The web is more a social creation than a technical one. I designed
+>The web is more a social creation than a technical one. I designed
 it for a social effect — to help people work together — and not as
 a technical toy. The ultimate goal of the Web is to support and
 improve our weblike existence in the world. We clump into families,
 associations, and companies. We develop trust across the miles and
 distrust around the corner.
+
 Tim Berners-Lee, “Weaving the Web”
 
-I can't in good conscience allow the U.S. government to destroy privacy, internet freedom and basic liberties for people around the world with this massive surveillance machine they're secretly building.
+>I can't in good conscience allow the U.S. government to destroy privacy, internet freedom and basic liberties for people around the world with this massive surveillance machine they're secretly building.
+
 Edward Snowden
 
 ## Introduction
 
-Allow us to be a bit provocative: all card-based payment schemes are broken. They basically fail at understanding the need of both identity and anonymity, which are the critical topics that should be addressed at the Web level. Recent issues highlighted in the news about privacy, stories about sensitive data theft and global surveillance, should alert us, as citizens of the world, on how we want the future of information processing to be.
+Allow us to be a bit provocative: all card-based payment schemes are broken. They basically fail at understanding the need of both identity and anonymity, which are the critical topics that should be addressed at the Web level. Recent issues highlighted in the news about privacy, stories about sensitive data theft and global surveillance, should alert us, as citizens of the world, to how we want the future of information processing to be.
 
 We need to get rid of insufficient data protection schemes, avoid whenever possible the use of trust models relying on a single central authority. The problem is global, and is way beyond the scope of this document, but we still can do something about it for the subject addressed in this workshop.
 
-Our main concern is to find some ways to enforce good practices, by participating to the definition of a set of standards that would allow seamless introduction of distributed, networked trust models, as we can find nowadays in cryptocurrencies schemes like Bitcoin or Dogecoin.
+Our main concern is to find ways to enforce good practices, by participating in the definition of a set of standards that would allow seamless introduction of distributed, networked trust models, as we can find nowadays in cryptocurrencies schemes like Bitcoin or Dogecoin.
 
 As we are also pragmatic, and aware that such changes will take years, we will address existing payment schemes, and hopefully pave the way for safer traditional schemes.
 
 ## Digital wallets and distributed models generalization
 
-In this chapter, we will make a tour of the most common payment scenarios. 
+In this chapter, we will conduct a tour of the most common payment scenarios. 
 
 Then we will make some proposals to provide a more uniform payment processing scheme, so that the user experience feels more comfortable, and more trustworthy as well, by limiting disclosure of required information to zones where it becomes necessary.
 
-Based on this work, we will envision some work-arounds for exisitng payment methods, and discuss on how Web standards could accelerate the migration.
+Based on this work, we will envision some work-arounds for exisitng payment methods, and discuss how Web standards could accelerate the migration.
 
 ### Card processing
 
@@ -48,13 +50,13 @@ The first step assumes that the cardholder is ready to trust the acceptor at som
 
 The second step which is ultimately important, as it is designed to provide a strong authentication of the cardholder, can be bypassed. 
 
-Choosing to not use 3-D Secure is often a decision of the acceptor, that has to put in balance the risk of a void sale, compared to the risk of a fradulent transaction. Again, this is a matter of trust level.
+Choosing not to use 3-D Secure is often a decision of the acceptor, that has to put in balance the risk of a void sale, compared to the risk of a fradulent transaction. Again, this is a matter of trust level.
 
 Finally, the third step feels rendundant with the second step, information-wise.
 
 The first step is basically *flawed at Web scale*.
 
-Althought it has its justifications for retail transactions processing, from which the e-commerce model is based upon, this step feels unnecessary and rises many security concerns.
+Althought it has its justifications for retail transactions processing, on which the e-commerce model is based, this step feels unnecessary and rises many security concerns.
 
 #### Proposed alternative
 
@@ -81,9 +83,9 @@ Digital currencies don't suffer from these issues, and it can be stated that per
 
 Lately, initiatives have come to light, as some markets are emerging, and the focus of established financial institutions on small businesses and individuals makes us envision a unprecedented growth in payments.
 
-E-commerce payments for sure, but also in retail, as the mobile point-of-sale (mPOS) solutions allow the same category of merchants to accept cards.
+For E-commerce payments, for sure, but also in retail, as the mobile point-of-sale (mPOS) solutions allow the same category of merchants to accept cards.
 
-To sump up, what can be foreseen about Web payments is that in years to come, anyone will be concerned about them not only as a customer, but as a seller as well.
+To sum up, what can be foreseen about Web payments is that in years to come, anyone may be concerned by them not only as a customer, but as a seller as well.
 
 ## Beyond the wallet scheme
 
@@ -100,12 +102,12 @@ Depending on the use cases of the public key, it may be signed by a Certificate 
 #### Initialization
 
 From the customer (cardholder) side:
-* Alice owns an account at Bank A, which provided her also a credit card.
+* Alice owns an account at Bank A, which also provided her with a credit card.
 * Alice provided a public key to Bank A, and after some identity verification, Bank A signed this public key.
 * Alice also owns some coupons from Company C, and owns a public key signed by the same entity.
 
 From the merchant (acceptor) side:
-* Bob runs an e-commerce store. Bank B provided him an account, as well as an acceptor contract.
+* Bob runs an e-commerce store. Bank B provided him with an account, as well as an acceptor contract.
 * Bob provided a public key to his bank, and after some identity verification, Bank B signed this public key.
 * Bob's store accepts coupons from Company C, therefore one of Bob's public key has been signed by the same entity.
 
