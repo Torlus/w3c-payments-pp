@@ -2,25 +2,28 @@ Lyra-Network Position Paper for **W3C Workshop on Web Payments**.
 
 Authors:
 
-Grégory Estrade - gregory.estrade@lyra-network.com
+Grégory Estrade <gregory.estrade@lyra-network.com>
 
-Laurent Penou - laurent.penou@lyra-network.com
+Laurent Penou <laurent.penou@lyra-network.com>
 
 
->The web is more a social creation than a technical one. I designed
+# Introduction
+
+
+
+>"The web is more a social creation than a technical one. I designed
 it for a social effect — to help people work together — and not as
 a technical toy. The ultimate goal of the Web is to support and
 improve our weblike existence in the world. We clump into families,
 associations, and companies. We develop trust across the miles and
-distrust around the corner.
+distrust around the corner."
 
-Tim Berners-Lee, “Weaving the Web”
+*Tim Berners-Lee, “Weaving the Web”*
 
->I can't in good conscience allow the U.S. government to destroy privacy, internet freedom and basic liberties for people around the world with this massive surveillance machine they're secretly building.
+>"I can't in good conscience allow the U.S. government to destroy privacy, internet freedom and basic liberties for people around the world with this massive surveillance machine they're secretly building."
 
-Edward Snowden
+*Edward Snowden*
 
-# Introduction
 
 
 Allow us to be a bit provocative: all card-based payment schemes are broken. They basically fail at understanding the need of both identity and anonymity, which are the critical topics that should be addressed at the Web level. Recent issues highlighted in the news about privacy, stories about sensitive data theft and global surveillance, should alert us, as citizens of the world, to how we want the future of information processing to be.
@@ -29,7 +32,7 @@ We need to get rid of insufficient data protection schemes, avoid whenever possi
 
 Our main concern is to find ways to enforce good practices, by participating in the definition of a set of standards that would allow seamless introduction of distributed, networked trust models, as we can find nowadays in cryptocurrencies schemes like Bitcoin or Dogecoin.
 
-As we are also pragmatic, and aware that such changes will take years, we will address existing payment schemes, and hopefully pave the way for safer traditional schemes.
+As we are also pragmatic, and aware that such changes will take years, we will address existing payment scenarios, and hopefully pave the way for safer traditional schemes.
 
 # Digital wallets and distributed models generalization
 
@@ -109,7 +112,7 @@ Our proposal is to extend the same wallet concept to include both existing payme
 
 Such a wallet could be shared among different devices: desktops, laptops, smartphones, tablets, etc. but also on servers.
 
-Depending on the use cases of the public key, it may be signed by a Certificate Authority, or using a "Web of trust" scheme instead.
+Depending on the use cases of the public keys, they may be signed by a Certificate Authority, or using a "Web of trust" scheme instead.
 
 ## Use case
 
@@ -171,18 +174,20 @@ However, some standards are already there, to help build up its foundations, nam
 
 We also believe that the specifications issued by the JOSE working group, especially those related to key protection, should be taken into account.
 
+We would like to address the issue with local storage of private keys, as it is a "single point of failure", and envision a distributed approach on that subject.
+
 # References
 
-Distributed private key management: http://individual.utoronto.ca/aldar/paper/2012/dpkg.pdf
+Distributed private key management: <http://individual.utoronto.ca/aldar/paper/2012/dpkg.pdf>
 
-WebCryptoAPI: http://www.w3.org/TR/WebCryptoAPI/
+WebCryptoAPI: <http://www.w3.org/TR/WebCryptoAPI/>
 
-Web of trust: http://en.wikipedia.org/wiki/Web\_of\_trust
+Web of trust: <http://en.wikipedia.org/wiki/Web_of_trust>
 
-Protecting JSON Web Key (JWK) Objects: http://tools.ietf.org/html/draft-miller-jose-jwe-protected-jwk-02
+Protecting JSON Web Key (JWK) Objects: <http://tools.ietf.org/html/draft-miller-jose-jwe-protected-jwk-02>
 
-WebID provider using Node.js: http://magnetik.github.io/node-webid-report/
+WebID provider using Node.js: <http://magnetik.github.io/node-webid-report/>
 
-FOAF Vocabulary Specification 0.99: http://xmlns.com/foaf/spec/
+FOAF Vocabulary Specification 0.99: <http://xmlns.com/foaf/spec/>
 
-WebID 1.0: http://www.w3.org/2005/Incubator/webid/spec/
+WebID 1.0: <http://www.w3.org/2005/Incubator/webid/spec/>
