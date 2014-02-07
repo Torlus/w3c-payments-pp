@@ -1,29 +1,26 @@
-Lyra-Network Position Paper for **W3C Workshop on Web Payments**.
+---
+title: Digital wallets and distributed models generalization
+subtitle: Advanced Hypermedia Patterns
+author: Gregory Estrade
+date: February 7th 2014
+---
+**Lyra-Network** Position Paper for **W3C Workshop on Web Payments**.
 
-Authors:
+- Gregory Estrade - <gregory.estrade@lyra-network.com>
 
-Grégory Estrade <gregory.estrade@lyra-network.com>
+- Laurent Penou - <laurent.penou@lyra-network.com>
 
-Laurent Penou <laurent.penou@lyra-network.com>
-
+* * *
 
 # Introduction
 
 
 
->"The web is more a social creation than a technical one. I designed
-it for a social effect — to help people work together — and not as
-a technical toy. The ultimate goal of the Web is to support and
-improve our weblike existence in the world. We clump into families,
-associations, and companies. We develop trust across the miles and
-distrust around the corner."
-
-*Tim Berners-Lee, “Weaving the Web”*
+>"The web is more a social creation than a technical one. I designed it for a social effect — to help people work together — and not as a technical toy. The ultimate goal of the Web is to support and improve our weblike existence in the world. We clump into families, associations, and companies. We develop trust across the miles and distrust around the corner."
+>_-- Tim Berners-Lee, “Weaving the Web”_
 
 >"I can't in good conscience allow the U.S. government to destroy privacy, internet freedom and basic liberties for people around the world with this massive surveillance machine they're secretly building."
-
-*Edward Snowden*
-
+>_-- Edward Snowden_
 
 
 Allow us to be a bit provocative: all card-based payment schemes are broken. They basically fail at understanding the need of both identity and anonymity, which are the critical topics that should be addressed at the Web level. Recent issues highlighted in the news about privacy, stories about sensitive data theft and global surveillance, should alert us, as citizens of the world, to how we want the future of information processing to be.
